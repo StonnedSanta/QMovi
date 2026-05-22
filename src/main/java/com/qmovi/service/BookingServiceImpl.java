@@ -8,6 +8,8 @@ import com.qmovi.exception.SeatAlreadyBookedException;
 import com.qmovi.repository.BookingRepository;
 import com.qmovi.repository.ShowRepository;
 
+import jakarta.transaction.Transactional;
+
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -26,6 +28,7 @@ public class BookingServiceImpl implements BookingService {
     }
 
     @Override
+    @Transactional
     public Booking createBooking(BookingDTO bookingDTO) {
 
         Show show = showRepository.findById(bookingDTO.getShowId())
