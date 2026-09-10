@@ -8,9 +8,11 @@ import com.qmovi.repository.ShowRepository;
 import com.qmovi.service.BookingService;
 import jakarta.validation.Valid;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 import java.util.List;
 
+@CrossOrigin(origins = "http://localhost:5173")
 @RestController
 @RequestMapping("/bookings")
 public class BookingController {

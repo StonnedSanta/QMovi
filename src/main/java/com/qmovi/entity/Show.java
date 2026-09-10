@@ -37,6 +37,10 @@ public class Show {
         return movie;
     }
 
+    public void setId(Long id) {
+        this.id = id;
+    }
+
     public void setShowTime(String showTime) {
         this.showTime = showTime;
     }
